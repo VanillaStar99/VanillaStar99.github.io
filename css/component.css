@@ -5,7 +5,8 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
-    cursor: default;
+    touch-action: none;
+    -ms-touch-action: none;
 }
 
 .bg-colour {
