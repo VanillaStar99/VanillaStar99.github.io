@@ -1,6 +1,7 @@
 /* Global */
-html {
+* {
     user-select: none;
+    cursor: default;
 }
 
 .bg-colour {
@@ -199,7 +200,7 @@ html {
 }
 
 .hero-heading {
-    left: 5%;
+    padding-left: 5%;
     font-size: 100px;
     color: #8a4fbf;
 }
@@ -775,7 +776,7 @@ html {
     }
 
     .hero-heading {
-        left: 0;
+        padding-left: 0;
         font-size: 48px;
     }
 
@@ -892,7 +893,7 @@ html {
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 380px) {
     .hero {
         padding-top: 12vh;
         padding-bottom: 12vh;
