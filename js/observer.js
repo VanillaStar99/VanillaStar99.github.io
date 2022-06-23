@@ -1,7 +1,7 @@
 const fadeItems = document.querySelectorAll(".fade");
 
 const fadeinOption = {
-  rootMargin: "0px 0px -175px 0px"
+  rootMargin: "0px 0px -100px 0px"
 };
 
 const fadeinScroll = new IntersectionObserver(function (items, fadeinScroll) {
