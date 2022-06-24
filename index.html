@@ -10,15 +10,26 @@
 	<link rel="icon" type="image/x-icon" href="images/icon/icon.ico" />
 	<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="plugins/css/layout.css">
-	<link rel="stylesheet" href="plugins/css/base.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/component.css">
 
 	<script src="https://kit.fontawesome.com/593844f44d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="audio" id="audio">
+		<audio id="music">
+			<source src="audio/bgmusic.mp3" type="audio/mp3">
+			<source src="audio/bgmusic.ogg" type="audio/ogg">
+		</audio>
+		<p class="audio-title">聆聽音樂</p>
+		<div class="music-btn-group">
+			<button onclick="playmusic()" class="btn music-btn">是</button>
+			<button onclick="stopmusic()" class="btn music-btn">否</button>
+		</div>
+	</div>
+	<div class="wrapper item-hide" id="wrapper">
 		<div class="bg"></div>
 		<header class="header">
 			<div class="container">
@@ -45,7 +56,10 @@
 								</div>
 								<ul>
 									<li class="popup-menu-list">
-										<a href="#item-about" class="popup-menu-item">簡介</a>
+										<a href="#item-quote" class="popup-menu-item">簡介</a>
+									</li>
+									<li class="popup-menu-list">
+										<a href="#item-info" class="popup-menu-item">資料</a>
 									</li>
 									<li class="popup-menu-list">
 										<a href="#item-stats" class="popup-menu-item">屬性</a>
@@ -70,10 +84,11 @@
 					<div class="hero-content">
 						<h1 class="hero-heading">你好<br>我是草上飛</h1>
 					</div>
-					<a href="#blank" class="btn contact-btn">聯絡</a>
+					<a href="https://umamusume.jp/character/detail/?name=grasswonder" target="_blank"
+						class="btn website-btn">官網</a>
 				</div>
 			</div>
-			<div class="quote bg-colour" id="item-about">
+			<div class="quote bg-colour" id="item-quote">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-push-1">
@@ -88,7 +103,38 @@
 					</div>
 				</div>
 			</div>
-			<div class="stats" id="item-stats">
+			<div class="info" id="item-info">
+				<div class="container">
+					<h2 class="subtitle u-text-center">資料</h2>
+					<form class="form fade fade-up">
+						<label>譯名</label>
+						<input type="text" value="草原奇蹟" disabled ondragenter="false">
+						<div class="row">
+							<div class="col-sm-6">
+								<label>髮色</label>
+								<input type="text" value="棕髮" disabled>
+							</div>
+							<div class="col-sm-6">
+								<label>瞳色</label>
+								<input type="text" value="藍瞳" disabled>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<label>生日</label>
+								<input type="text" value="2月18日" disabled>
+							</div>
+							<div class="col-sm-6">
+								<label>星座</label>
+								<input type="text" value="水瓶座" disabled>
+							</div>
+						</div>
+						<label>萌點</label>
+						<textarea rows="5" readonly>獸耳、挑染、長直、歸國子女、大和撫子、溫柔、姐姐、真·馬尾</textarea>
+					</form>
+				</div>
+			</div>
+			<div class="stats bg-colour" id="item-stats">
 				<div class="container">
 					<h2 class="subtitle u-text-center">屬性</h2>
 					<div class="stats-group">
@@ -118,7 +164,7 @@
 						</div>
 						<div class="row">
 							<div class="stats-card-group col-sm-6 u-clearfix fade fade-left">
-								<div class="stats-card stats-card-nomargin">
+								<div class="stats-card stats-card-margin">
 									<div class="stats-card-inner">
 										<h4 class="stats-card-title">力量</h4>
 										<p class="stats-card-text">初始屬性: 99<br>滿星屬性: 129<br>屬性成長: 10%</p>
@@ -129,7 +175,7 @@
 								</div>
 							</div>
 							<div class="stats-card-group col-sm-6 u-clearfix fade fade-right">
-								<div class="stats-card stats-card-nomargin-two">
+								<div class="stats-card stats-card-margin-two">
 									<div class="stats-card-inner">
 										<h4 class="stats-card-title">毅力</h4>
 										<p class="stats-card-text">初始屬性: 74<br>滿星屬性: 96<br>屬性成長: 0%</p>
@@ -143,7 +189,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="experience bg-colour" id="item-experience">
+			<div class="experience" id="item-experience">
 				<div class="container">
 					<h2 class="subtitle u-text-center">經歷</h2>
 					<div class="timeline-group">
@@ -190,7 +236,7 @@
 								</div>
 							</div>
 							<div class="timeline-cards-row fade fade-right">
-								<div class="timeline-card timeline-card-nomargin">
+								<div class="timeline-card timeline-card-margin">
 									<p class="timeline-card-text u-clearfix">
 										<img class="timeline-card-image" src="images/experience/04.png" alt="圖片已失效">
 										2000年<br>寶塚紀念<br>第六
@@ -201,7 +247,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="costume" id="item-costume">
+			<div class="costume bg-colour" id="item-costume">
 				<div class="container">
 					<h2 class="subtitle u-text-center">服裝</h2>
 					<div class="costume-list">
@@ -243,7 +289,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="costume-item fade fade-left">
+						<div class="costume-item costume-item-margin fade fade-left" id="morecostume01">
 							<div class="row costume-row">
 								<div class="costume-image col-sm-6 col-sm-push-1">
 									<div class="imgbox">
@@ -262,7 +308,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="costume-item item-hide fade fade-right" id="morecostume01">
+						<div class="costume-item item-hide fade fade-right" id="morecostume02">
 							<div class="row costume-row">
 								<div class="costume-image col-sm-6 col-sm-push-5">
 									<div class="imgbox">
@@ -281,7 +327,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="costume-item-margin item-hide fade fade-left" id="morecostume02">
+						<div class="costume-item costume-item-margin item-hide fade fade-left" id="morecostume03">
 							<div class="row costume-row">
 								<div class="costume-image col-sm-6 col-sm-push-1">
 									<div class="imgbox">
@@ -322,6 +368,7 @@
 			return false;
 		}
 	</script>
+	<script src="js/playmusic.js"></script>
 	<script src="js/observer.js"></script>
 	<script src="js/bigimg.js"></script>
 	<script src="js/showmore.js"></script>
