@@ -25,6 +25,10 @@
     color: #8a4fbf;
 }
 
+.item-hide {
+    display: none;
+}
+
 /* Background */
 .bg {
     position: fixed;
@@ -541,7 +545,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    display: none;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
 }
@@ -552,7 +555,6 @@
     transform: translate(-50%, -50%);
     max-width: 90%;
     max-height: 90%;
-    display: none;
 }
 
 /* Costumes Button */

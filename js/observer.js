@@ -10,7 +10,6 @@ const fadeinScroll = new IntersectionObserver(function (items, fadeinScroll) {
       return;
     } else {
       item.target.classList.add("fadein");
-      fadeinScroll.unobserve(item.target);
     }
   });
 }, fadeinOption);
