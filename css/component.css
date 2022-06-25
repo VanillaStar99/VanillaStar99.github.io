@@ -1,6 +1,5 @@
 /* Global */
 * {
-    background-attachment: fixed;
     font-weight: lighter;
     cursor: default;
     scroll-behavior: smooth;
@@ -13,6 +12,10 @@
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+body {
+    background-attachment: fixed;
 }
 
 .bg-colour {
