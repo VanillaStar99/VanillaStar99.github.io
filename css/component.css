@@ -1066,6 +1066,14 @@
 }
 
 @media (max-width: 480px) {
+    .audio {
+        display: none;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
     .navbar-social-bar {
         margin-left: 0;
     }
