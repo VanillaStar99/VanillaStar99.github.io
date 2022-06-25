@@ -19,25 +19,28 @@
 
 <body>
 	<div class="audio" id="audio">
-		<audio id="music">
+		<audio id="music" preload="metadata">
 			<source src="audio/bgmusic.mp3" type="audio/mp3">
 			<source src="audio/bgmusic.ogg" type="audio/ogg">
 		</audio>
 		<p class="audio-title">聆聽音樂</p>
-		<div class="music-btn-group">
+		<div class="btn-group music-btn-group">
 			<button onclick="playmusic()" class="btn music-btn">是</button>
 			<button onclick="stopmusic()" class="btn music-btn">否</button>
 		</div>
 	</div>
 	<div class="wrapper item-hide" id="wrapper">
 		<div class="bg"></div>
+		<a href="#" class="to-top">
+			<img src="images/header/totop.png" alt="圖片已失效">
+		</a>
 		<header class="header">
 			<div class="container">
 				<div class="navbar navbar-collapse u-clearfix">
 					<div class="social-bar navbar-social-bar">
-						<a href="https://www.bilibili.com/video/BV1hh411J7Zo?share_source=copy_web" target="_blank"
+						<a href="https://youtu.be/Zhh-0UKlMvU" target="_blank" title="角色歌: Secret GRADUATION"
 							class="icon-btn">
-							<i class="fa-brands fa-bilibili"></i>
+							<i class="fa-brands fa-youtube"></i>
 						</a>
 					</div>
 					<div class="nav">
@@ -49,17 +52,17 @@
 						<div class="popup-menu" id="popup-overlay">
 							<div class="container">
 								<div class="u-clearfix">
-									<a href="#blank" class="popup-menu-close">
+									<a href="##" class="popup-menu-close">
 										<span></span>
 										<span></span>
 									</a>
 								</div>
 								<ul>
-									<li class="popup-menu-list">
+									<li class="popup-menu-list popup-menu-list-margin">
 										<a href="#item-quote" class="popup-menu-item">簡介</a>
 									</li>
 									<li class="popup-menu-list">
-										<a href="#item-info" class="popup-menu-item">資料</a>
+										<a href="#item-data" class="popup-menu-item">資料</a>
 									</li>
 									<li class="popup-menu-list">
 										<a href="#item-stats" class="popup-menu-item">屬性</a>
@@ -85,10 +88,10 @@
 						<h1 class="hero-heading">你好<br>我是草上飛</h1>
 					</div>
 					<a href="https://umamusume.jp/character/detail/?name=grasswonder" target="_blank"
-						class="btn website-btn">官網</a>
+						title="遊戲官網人物介紹(日文)" class="btn website-btn">官網</a>
 				</div>
 			</div>
-			<div class="quote bg-colour" id="item-quote">
+			<div class="quote bg-colour lean-bg-top lean-bg-bottom" id="item-quote">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-push-1">
@@ -103,12 +106,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="info" id="item-info">
+			<div class="data" id="item-data">
 				<div class="container">
 					<h2 class="subtitle u-text-center">資料</h2>
-					<form class="form fade fade-up">
+					<form class="data-item fade fade-up">
 						<label>譯名</label>
-						<input type="text" value="草原奇蹟" disabled ondragenter="false">
+						<input type="text" value="草原奇蹟" disabled>
 						<div class="row">
 							<div class="col-sm-6">
 								<label>髮色</label>
@@ -131,6 +134,11 @@
 						</div>
 						<label>萌點</label>
 						<textarea rows="5" readonly>獸耳、挑染、長直、歸國子女、大和撫子、溫柔、姐姐、真·馬尾</textarea>
+						<div class="btn-group">
+							<input type="submit" class="btn data-btn" value="來源"
+								onclick="window.open('https://zh.moegirl.org.cn/index.php?title=%E8%8D%89%E4%B8%8A%E9%A3%9E')"
+								title="草上飛 - 萌娘百科">
+						</div>
 					</form>
 				</div>
 			</div>
@@ -265,7 +273,7 @@
 									<div class="costume-text-align">
 										<h3 class="costume-title">特雷森學園·校服</h3>
 										<p class="costume-intro">我的名字叫草上飛<br>既然以賽馬娘的姿態存在於此<br>就要在這條“道路”上窮盡一切</p>
-										<a href="#blank" class="costume-btn" id="costumebtn01">顯示</a>
+										<a href="##" class="costume-btn" id="costumebtn01">顯示</a>
 									</div>
 								</div>
 							</div>
@@ -284,7 +292,7 @@
 									<div class="costume-text-align text-align-right">
 										<h3 class="costume-title">栗毛の怪物·決勝服</h3>
 										<p class="costume-intro">雖說藍色是能讓人靜下心來的顏色<br>但藍色也是比那赤紅更為熱烈燃燒著的<br>火焰的顏色呢</p>
-										<a href="#blank" class="costume-btn" id="costumebtn02">顯示</a>
+										<a href="##" class="costume-btn" id="costumebtn02">顯示</a>
 									</div>
 								</div>
 							</div>
@@ -303,7 +311,7 @@
 									<div class="costume-text-align">
 										<h3 class="costume-title">不死鳥·舞台服</h3>
 										<p class="costume-intro">無論是哪種舞步都放馬過來喲～<br>這副日日精進舞蹈所鍛鍊出來的身體<br>敬請見證</p>
-										<a href="#blank" class="costume-btn" id="costumebtn03">顯示</a>
+										<a href="##" class="costume-btn" id="costumebtn03">顯示</a>
 									</div>
 								</div>
 							</div>
@@ -322,7 +330,7 @@
 									<div class="costume-text-align text-align-right">
 										<h3 class="costume-title">聖翡翠·治愈師</h3>
 										<p class="costume-intro">來吧，治癒之力<br>集結於我的手中<br>那麼，為勝利獻上祝福吧</p>
-										<a href="#blank" class="costume-btn" id="costumebtn04">顯示</a>
+										<a href="##" class="costume-btn" id="costumebtn04">顯示</a>
 									</div>
 								</div>
 							</div>
@@ -341,7 +349,7 @@
 									<div class="costume-text-align">
 										<h3 class="costume-title">千紫萬紅·支援卡面</h3>
 										<p class="costume-intro">花即為心...<br>插花就是把四季繁花<br>以最美的形體展現出來</p>
-										<a href="#blank" class="costume-btn" id="costumebtn05">顯示</a>
+										<a href="##" class="costume-btn" id="costumebtn05">顯示</a>
 									</div>
 								</div>
 							</div>
@@ -354,24 +362,42 @@
 						<img src="images/costume/healer.jpg" alt="圖片已失效" class="image-big item-hide" id="imgbig04">
 						<img src="images/costume/support.png" alt="圖片已失效" class="image-big item-hide" id="imgbig05">
 					</div>
-					<div class="costumes-btn-group">
-						<a href="#blank" class="btn costumes-btn fade fade-down" id="morebtn">更多</a>
-						<a href="#blank" class="btn costumes-btn item-hide fade fade-down" id="lessbtn">收回</a>
+					<div class="btn-group">
+						<a href="##" class="btn costumes-btn fade fade-down" id="morebtn">更多</a>
+						<a href="##" class="btn costumes-btn item-hide fade fade-down" id="lessbtn">收回</a>
 					</div>
 				</div>
 			</div>
+			<div class="contact subtitle">聯絡</div>
+			<div class="info fade fade-up">
+				<div class="info-email">
+					<a href="mailto:umamusume.jp@gmail.com" title="這是個虛假郵箱">郵箱: umamusume.jp@gmail.com</a>
+				</div>
+				<div class="info-phone">
+					<a href="tel:0987654321" title="這是個虛假電話">電話: 0987654321</a>
+				</div>
+				<div class="social-bar info-icon-bar">
+					<a href="https://umamusume.jp/character/detail/?name=grasswonder" target="_blank"
+						title="遊戲官網人物介紹(日文)" class="icon-btn info-icon">
+						<i class="fa-solid fa-globe"></i>
+					</a>
+					<a href="https://youtu.be/Zhh-0UKlMvU" target="_blank" title="角色歌: Secret GRADUATION"
+						class="icon-btn info-icon">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+				</div>
+			</div>
 		</section>
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<div class="container">
+				<p class="final-text">僅作學術交流使用，不作任何商業用途</p>
+				<p class="copyright">版權所有 &copy; 2022 草上飛</p>
+			</div>
+		</footer>
 	</div>
-	<script>
-		window.oncontextmenu = function () {
-			return false;
-		}
-	</script>
-	<script src="js/playmusic.js"></script>
-	<script src="js/observer.js"></script>
-	<script src="js/bigimg.js"></script>
-	<script src="js/showmore.js"></script>
+	<script src="js/audio.js"></script>
+	<script src="js/animation.js"></script>
+	<script src="js/costume.js"></script>
 </body>
 
 </html>
