@@ -14,10 +14,6 @@
     display: none;
 }
 
-body {
-    background-attachment: fixed;
-}
-
 .bg-colour {
     background-color: #bca0dc;
 }
@@ -89,6 +85,8 @@ body {
     background-image: url("../images/header/background.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Lean Background */
