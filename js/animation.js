@@ -2,6 +2,10 @@ var fadeItems = document.querySelectorAll(".fade");
 var header = document.querySelector("header");
 var toTop = document.querySelector(".to-top")
 
+document.oncontextmenu = function () {
+  return false;
+}
+
 const fadeinOption = {
   rootMargin: "0px 0px -100px 0px"
 };
